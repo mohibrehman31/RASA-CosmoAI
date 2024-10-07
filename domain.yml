@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_planet
+  - ask_mission
+  - ask_astronaut
+  - ask_space_agency
+  - ask_general_space
+  - bot_challenge
+
+entities:
+  - planet
+  - mission
+  - astronaut
+  - agency
+
+slots:
+  planet:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: planet
+  mission:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: mission
+  astronaut:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: astronaut
+  agency:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: agency
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm your space exploration assistant. What would you like to know about the cosmos?"
+    - text: "Greetings, space enthusiast! How can I help you explore the universe today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Remember, the universe is full of possibilities. Come back anytime for more space knowledge!"
+    - text: "Farewell! Keep looking up at the stars, and return when you're ready for more cosmic adventures."
+
+  utter_planet_info:
+    - text: "Ah, {planet}! It's a fascinating world. Here are some key facts about {planet}: [Insert specific information about {planet}]"
+    - text: "{planet} is an intriguing planet in our solar system. Did you know that [Insert interesting fact about {planet}]? What specific aspect of {planet} would you like to explore further?"
+
+  utter_mission_info:
+    - text: "The {mission} mission is a significant space exploration endeavor. Here are some key details about {mission}: [Insert mission-specific information]"
+    - text: "{mission} has contributed greatly to our understanding of space. One of its major achievements was [Insert achievement]. What aspect of the {mission} mission interests you most?"
+
+  utter_astronaut_info:
+    - text: "{astronaut} is a renowned astronaut who has made significant contributions to space exploration. Some of {astronaut}'s notable achievements include [Insert achievements]. What would you like to know more about {astronaut}?"
+    - text: "Ah, {astronaut}! They've had a fascinating career in space. Did you know that [Insert interesting fact about {astronaut}]? Is there a specific aspect of {astronaut}'s career you're curious about?"
+
+  utter_agency_info:
+    - text: "{agency} plays a crucial role in space exploration. Some of their key missions include [Insert missions]. What specific aspect of {agency}'s work would you like to know more about?"
+    - text: "{agency} has been at the forefront of space research and exploration. One of their most notable achievements is [Insert achievement]. Is there a particular {agency} project you're interested in?"
+
+  utter_general_space_info:
+    - text: "That's an intriguing question about {topic}. [Insert brief explanation]. Would you like to know more about any specific aspect of this?"
+    - text: "{topic} is a fascinating area of space science. Here's a key point to consider: [Insert key point]. What else would you like to know about {topic}?"
+
+  utter_default:
+    - text: "I'm not sure I understood that correctly. Could you rephrase your question about space exploration?"
+    - text: "The cosmos is vast, and so is my knowledge, but I didn't quite catch that. Can you ask me in a different way?"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_planet_info
+  - utter_mission_info
+  - utter_astronaut_info
+  - utter_agency_info
+  - utter_general_space_info
+  - utter_default
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

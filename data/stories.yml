@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask about planet
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_planet
+        entities:
+          - planet: "Mars"
+      - action: utter_planet_info
+      - intent: ask_planet
+        entities:
+          - planet: "Jupiter"
+      - action: utter_planet_info
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask about mission and astronaut
+    steps:
+      - intent: ask_mission
+        entities:
+          - mission: "Apollo"
+      - action: utter_mission_info
+      - intent: ask_astronaut
+        entities:
+          - astronaut: "Neil Armstrong"
+      - action: utter_astronaut_info
+
+  - story: ask about space agency and general space topic
+    steps:
+      - intent: ask_space_agency
+        entities:
+          - agency: "NASA"
+      - action: utter_agency_info
+      - intent: ask_general_space
+      - action: utter_general_space_info
+
+  - story: multiple planet queries
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_planet
+        entities:
+          - planet: "Venus"
+      - action: utter_planet_info
+      - intent: ask_planet
+        entities:
+          - planet: "Saturn"
+      - action: utter_planet_info
+      - intent: ask_planet
+        entities:
+          - planet: "Neptune"
+      - action: utter_planet_info
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: mixed space queries
+    steps:
+      - intent: ask_mission
+        entities:
+          - mission: "Hubble"
+      - action: utter_mission_info
+      - intent: ask_general_space
+      - action: utter_general_space_info
+      - intent: ask_astronaut
+        entities:
+          - astronaut: "Sally Ride"
+      - action: utter_astronaut_info
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_greet

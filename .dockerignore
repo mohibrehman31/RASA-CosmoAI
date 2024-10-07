@@ -1,0 +1,69 @@
+# Version control
+.git
+.gitignore
+
+# Python cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Virtual environment
+venv
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE specific files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rasa specific
+models
+!models/*.tar.gz
+results
+events.db
+events.json
+rasa.db
+
+# Project specific
+README.md
+CHANGELOG.md
+docker-compose.yml
+Dockerfile
+
+# Test files
+tests/
+test/
+
+# Temporary files
+tmp/
+temp/
+
+# Logs
+*.log

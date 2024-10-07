@@ -1,0 +1,116 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi there
+      - Hello
+      - Hey
+      - Good morning
+      - Good evening
+      - Hey there
+      - Greetings
+      - What's up
+      - How's it going
+
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you later
+      - Catch you later
+      - Have a good one
+      - Until next time
+      - Farewell
+      - Take care
+
+  - intent: ask_planet
+    examples: |
+      - Tell me about [Mars](planet)
+      - What do you know about [Jupiter](planet)?
+      - Is [Saturn](planet) interesting?
+      - [Venus](planet) facts please
+      - How big is [Neptune](planet)?
+      - What's special about [Uranus](planet)?
+      - Can you describe [Mercury](planet)?
+      - I want to learn about [Earth](planet)
+      - Give me information on [Pluto](planet)
+      - What's the atmosphere like on [Mars](planet)?
+      - How many moons does [Jupiter](planet) have?
+      - Tell me about the rings of [Saturn](planet)
+      - Is there life on [Venus](planet)?
+      - How long is a day on [Neptune](planet)?
+      - What's the temperature on [Mercury](planet)?
+      - How far is [Earth](planet) from the Sun?
+      - Why isn't [Pluto](planet) considered a planet anymore?
+      - What's the largest volcano on [Mars](planet)?
+      - Is [Jupiter](planet) a gas giant?
+      - Can humans live on [Saturn](planet)?
+      - What's the hottest planet in our solar system?
+      - Which planet is closest to the Sun?
+      - What's the smallest planet?
+      - Tell me about the planet with the most moons
+      - Which planet spins backwards?
+      - What planet has the strongest magnetic field?
+      - Tell me about the planet with the shortest year
+      - Which planet has the longest day?
+      - What's the windiest planet?
+
+  - intent: ask_mission
+    examples: |
+      - Tell me about the [Apollo](mission) mission
+      - What was [Voyager](mission) all about?
+      - When did [Hubble](mission) launch?
+      - Give me details on [Curiosity](mission)
+      - What's [James Webb](mission) doing now?
+      - Explain the [Cassini](mission) mission
+      - What did we learn from [New Horizons](mission)?
+      - How successful was [Rosetta](mission)?
+      - What's the status of [Juno](mission)?
+      - Tell me about [Perseverance](mission) on Mars
+
+  - intent: ask_astronaut
+    examples: |
+      - Who is [Neil Armstrong](astronaut)?
+      - Tell me about [Buzz Aldrin](astronaut)
+      - What missions did [Sally Ride](astronaut) go on?
+      - How long was [Scott Kelly](astronaut) in space?
+      - Is [Chris Hadfield](astronaut) still an astronaut?
+      - What's [Peggy Whitson](astronaut) known for?
+      - Tell me about [Yuri Gagarin](astronaut)'s first flight
+      - What did [John Glenn](astronaut) accomplish?
+      - How many spacewalks did [Sunita Williams](astronaut) do?
+      - What's [Tim Peake](astronaut)'s background?
+
+  - intent: ask_space_agency
+    examples: |
+      - What does [NASA](agency) do?
+      - Tell me about [ESA](agency)
+      - How is [Roscosmos](agency) different from NASA?
+      - What are [JAXA](agency)'s main objectives?
+      - When was [ISRO](agency) founded?
+      - What's [CNSA](agency)'s biggest achievement?
+      - How does [CSA](agency) contribute to space exploration?
+      - What missions has [CONAE](agency) undertaken?
+      - Tell me about [ASI](agency)'s role in Europe
+      - What's [DLR](agency) working on currently?
+
+  - intent: ask_general_space
+    examples: |
+      - What is a black hole?
+      - How do galaxies form?
+      - What's dark matter?
+      - Explain solar flares
+      - What are comets made of?
+      - How do stars die?
+      - What's the Big Bang theory?
+      - Tell me about nebulae
+      - What are exoplanets?
+      - How does gravity work in space?
+
+  - intent: bot_challenge
+    examples: |
+      - Are you a bot?
+      - Are you a human?
+      - Am I talking to a bot?
+      - Am I talking to a human?

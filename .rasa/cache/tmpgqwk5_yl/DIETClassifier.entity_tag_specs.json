@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-agency",
+      "2": "I-agency",
+      "3": "L-agency",
+      "4": "U-agency",
+      "5": "B-astronaut",
+      "6": "I-astronaut",
+      "7": "L-astronaut",
+      "8": "U-astronaut",
+      "9": "B-mission",
+      "10": "I-mission",
+      "11": "L-mission",
+      "12": "U-mission",
+      "13": "B-planet",
+      "14": "I-planet",
+      "15": "L-planet",
+      "16": "U-planet",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-agency": 1,
+      "I-agency": 2,
+      "L-agency": 3,
+      "U-agency": 4,
+      "B-astronaut": 5,
+      "I-astronaut": 6,
+      "L-astronaut": 7,
+      "U-astronaut": 8,
+      "B-mission": 9,
+      "I-mission": 10,
+      "L-mission": 11,
+      "U-mission": 12,
+      "B-planet": 13,
+      "I-planet": 14,
+      "L-planet": 15,
+      "U-planet": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
